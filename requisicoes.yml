@@ -10,7 +10,7 @@ collection:
   - url: http://localhost:3000/
     name: Teste API
     meta:
-      id: req_8469817c0db545bb959179819fabea0a
+      id: req_efaa8de54c73476db558d2bef1ce94a5
       created: 1788302782767
       modified: 1788302809083
       isPrivate: false
@@ -33,7 +33,7 @@ collection:
   - url: http://localhost:3000/test
     name: Teste conexão com o banco
     meta:
-      id: req_f4d7e01bace643d9b36ac3b09c11bb39
+      id: req_89ff3d4c5e7344e99783c853c3e5b3d4
       created: 1788303365545
       modified: 1788303404106
       isPrivate: false
@@ -53,16 +53,39 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:3000/test/tables
+    name: Teste listar tabelas banco
+    meta:
+      id: req_dd7a813221e04d8f91240f50c1e3ca12
+      created: 1788908644078
+      modified: 1788908667101
+      isPrivate: false
+      description: ""
+      sortKey: -1788302782717
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1788302107432
-    modified: 1788302107432
+    created: 1788908173093
+    modified: 1788908173093
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1788302107429
-    modified: 1788302107429
+    created: 1788908173089
+    modified: 1788908173089
     isPrivate: false
