@@ -5,24 +5,48 @@ const FilmeController = {
         const filmes = await FilmeModel.getAllFilmes()
 
         return res.json(filmes)
+
+
     },
 
-    async createFilme(req, res){
+    async getFilmeById(req, res) {
+        const { id } = req.params
+
+        const filme = await FilmeModel.findById(id)
+
+        return res.json(filme)
+    },
+
+      async getFilmeByFiltro(req, res) {
+        const { titulo, diretor, genero } = req.query
+
+        const filme = await FilmeModel.search({
+             titulo,
+             genero,
+             diretor
+       
+    
+    
+       } )
+
+        return res.json(filme)
+    },
+
+    async createFilme(req, res) {
         const {
             titulo,
-            diretorID,
+            diretorId,
             generos
         } = req.body
 
-       const filme = {
-        titulo,
-        diretorID
-       }
+        const filme = {
+            titulo,
+            diretorId
+        }
 
-       const filmeId = await FilmeModel.create(filmes, generos)
-
-       return res.status(201).json({ id: filmeId })
-
+        const filmeId = await FilmeModel.create(filme, generos)
+        
+        return res.status(201).json({ id: filmeId })
     }
 }
 

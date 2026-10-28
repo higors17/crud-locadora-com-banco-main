@@ -10,7 +10,7 @@ const GeneroController = {
     async createGenero(req, res) {
         const { nome } = req.body
 
-        const genero = await GeneroModel.create ({
+        const genero = await GeneroModel.create({
             nome
         })
 
